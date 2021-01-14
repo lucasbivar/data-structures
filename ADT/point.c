@@ -16,3 +16,7 @@ Point* create(float x, float y){
   }
   return p;
 }
+
+void release(Point* p){
+  free(p);
+}
