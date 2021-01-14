@@ -20,3 +20,13 @@ Point* create(float x, float y){
 void release(Point* p){
   free(p);
 }
+
+void access(Point* p, float* x, float* y){
+  *x = p->x;
+  *y = p->y;
+}
+
+void assign(Point* p, float x, float y){
+  p->x = x;
+  p->y = y;
+}
