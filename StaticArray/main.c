@@ -23,6 +23,14 @@ struct student newStudent(){
   return Student;
 }
 
+void show_student(struct student *student){
+  printf("\nName: %s", student->name);
+  printf("Enrollment: %d\n", student->enrollment);
+  printf("Pontuation 1: %.2f\n", student->p1);
+  printf("Pontuation 2: %.2f\n", student->p2);
+  printf("Pontuation 3: %.2f\n",student->p3);
+}
+
 void show_options(){
   printf("\n=-=-=-=-=-=-=-=-=-Static Array-=-=-=-=-=-=-=-=-=\n");
   printf("[1] Push Back\n");
@@ -44,6 +52,7 @@ void menu(){
   Array* arr = NULL;
   int option, aux;
   int loop = 1;
+  struct student Student;
   arr = create();
   while(loop){
     show_options();
@@ -130,6 +139,24 @@ void menu(){
        }else{
         printf("\nThe array is not full!\n");
        }
+      }else{
+        printf("\nError\n");
+      }
+      break;
+    case 10:
+      printf("Student Position (>=0): ");
+      scanf("%d", &aux);
+      if(get(arr, aux, &Student)){
+        show_student(&Student);
+      }else{
+        printf("\nError\n");
+      }
+      break;
+    case 11:
+      printf("Student Enrollment: ");
+      scanf("%d", &aux);
+      if(find(arr, aux, &Student)){
+        show_student(&Student);
       }else{
         printf("\nError\n");
       }
