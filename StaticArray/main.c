@@ -10,17 +10,15 @@ struct student newStudent(){
   fgets(Student.name, sizeof(Student.name), stdin);
   printf("Enrollment (int):\n");
   scanf("%d", &Student.enrollment);
-  getchar();
+ 
   printf("Insert the first pontuation:\n");
-  getchar();
-  scanf("%d", &Student.p1);
-  getchar();
+  scanf("%f", &Student.p1);
+
   printf("Insert the second pontuation:\n");
-  scanf("%d", &Student.p1);
-  getchar();
+  scanf("%f", &Student.p2);
+
   printf("Insert the third pontuation:\n");
-  scanf("%d", &Student.p1);
-  getchar();
+  scanf("%f", &Student.p3);
    
   return Student;
 }
@@ -107,6 +105,7 @@ void menu(){
         printf("\nFailed!\n");
       }
       break;
+    
     case 12:
       if(!show(arr)){
         printf("\nFailed!\n");
