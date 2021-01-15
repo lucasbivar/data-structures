@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<Windows.h>
 #include "staticArray.h"
 
 
@@ -169,7 +170,7 @@ void menu(){
     default:
       break;
     }
-
+    Sleep(2000);
   }
 
 }
