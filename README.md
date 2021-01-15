@@ -7,6 +7,10 @@
 
 - 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/ADT)
 
+## 📍 Static Array
+
+- 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/StaticArray)
+
 <hr> 
  
 ## 🤓 Author 
