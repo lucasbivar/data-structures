@@ -33,3 +33,5 @@ int removestudent(Array* arr, int enrollment);
 int get(Array* arr, int index, struct student *student);
 
 int find(Array* arr, int enrollment, struct student *student);
+
+int show(Array* arr);
