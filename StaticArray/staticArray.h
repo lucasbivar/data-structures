@@ -11,3 +11,9 @@ typedef struct array Array;
 Array* create();
 
 void release(Array* arr);
+
+int size(Array* arr);
+
+int full(Array* arr);
+
+int empty(Array* arr);
