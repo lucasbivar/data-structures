@@ -29,3 +29,7 @@ int removeback(Array* arr);
 int removefront(Array* arr);
 
 int remove(Array* arr, int enrollment);
+
+int get(Array* arr, int index, struct student *student);
+
+int find(Array* arr, int enrollment, struct student *student);

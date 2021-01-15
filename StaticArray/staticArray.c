@@ -106,3 +106,23 @@ int remove(Array* arr, int enrollment){
   arr->size--;
   return 1;
 }
+
+int get(Array* arr, int index, struct student *student){
+  if(arr == NULL || index < 0 || index >= arr->size) return 0;
+  
+  *student = arr->data[index];
+
+  return 1;
+}
+
+int find(Array* arr, int enrollment, struct student *student){
+  if(arr == NULL) return 0;
+
+  int i = 0;
+  while(i < arr->size && arr->data[i].enrollment != enrollment) i++;
+
+  if(i == arr->size) return 0;
+  *student = arr->data[i];
+
+  return 1;
+}
