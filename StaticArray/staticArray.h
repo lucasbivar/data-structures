@@ -23,3 +23,9 @@ int pushback(Array* arr, struct student student);
 int pushfront(Array* arr, struct student student);
 
 int pushorder(Array* arr, struct student student);
+
+int removeback(Array* arr);
+
+int removefront(Array* arr);
+
+int remove(Array* arr, int enrollment);

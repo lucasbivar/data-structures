@@ -73,3 +73,36 @@ int pushorder(Array* arr, struct student student){
   arr->size++;
   return 1;
 }
+
+int removeback(Array* arr){
+  if(arr == NULL) return 0;
+  if(arr->size == 0) return 0;
+  arr->size--;
+  return 1;
+}
+
+int removefront(Array* arr){
+  if(arr == NULL) return 0;
+  if(arr->size == 0) return 0;
+  int i;
+  for(i = 0; i < arr->size-1; i++){
+    arr->data[i] = arr->data[i+1];
+  }
+  arr->size--;
+  return 1;
+}
+
+int remove(Array* arr, int enrollment){
+  if(arr == NULL) return 0;
+  if(arr->size == 0) return 0;
+  int k, i = 0;
+  while (i < arr->size && arr->data[i].enrollment != enrollment) i++;
+
+  if(i == arr->size) return 0;
+
+  for(k = i; k < arr->size-1; k++){
+    arr->data[i] = arr->data[i+1];
+  }
+  arr->size--;
+  return 1;
+}
