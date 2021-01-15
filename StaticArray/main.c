@@ -6,16 +6,22 @@
 struct student newStudent(){
   struct student Student;
   printf("=-=-=-=-=-=-=-=-=-New Student-=-=-=-=-=-=-=-=-=\n");
-  printf("Name: ");
+  printf("Name:\n");
   fgets(Student.name, sizeof(Student.name), stdin);
-  printf("Enrollment (int): ");
+  printf("Enrollment (int):\n");
   scanf("%d", &Student.enrollment);
-  printf("Insert the first pontuation: ");
+  getchar();
+  printf("Insert the first pontuation:\n");
+  getchar();
   scanf("%d", &Student.p1);
-  printf("Insert the second pontuation: ");
+  getchar();
+  printf("Insert the second pontuation:\n");
   scanf("%d", &Student.p1);
-  printf("Insert the third pontuation: ");
-  scanf("%d", &Student.p1); 
+  getchar();
+  printf("Insert the third pontuation:\n");
+  scanf("%d", &Student.p1);
+  getchar();
+   
   return Student;
 }
 
@@ -98,6 +104,11 @@ void menu(){
       if(removestudent(arr, aux)){
         printf("\nSuccess!\n");
       }else{
+        printf("\nFailed!\n");
+      }
+      break;
+    case 12:
+      if(!show(arr)){
         printf("\nFailed!\n");
       }
       break;

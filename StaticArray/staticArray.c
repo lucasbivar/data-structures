@@ -135,11 +135,11 @@ int show(Array* arr){
   int i;
   printf("\n=-=-=-=-=-=-=-=-=-All Students-=-=-=-=-=-=-=-=-=\n");
   for(i = 0; i < arr->size; i++){
-    printf("Name: %s\n", arr->data[i].name);
+    printf("Name: %s", arr->data[i].name);
     printf("Enrollment: %d\n", arr->data[i].enrollment);
     printf("Pontuation 1: %f\n", arr->data[i].p1);
     printf("Pontuation 2: %f\n", arr->data[i].p2);
-    printf("Pontuation 3: %f\n", arr->data[i].p3);
+    printf("Pontuation 3: %f\n\n", arr->data[i].p3);
   }
   return 1;
 }
