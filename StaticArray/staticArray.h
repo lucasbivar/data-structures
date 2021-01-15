@@ -17,3 +17,9 @@ int size(Array* arr);
 int full(Array* arr);
 
 int empty(Array* arr);
+
+int pushback(Array* arr, struct student student);
+
+int pushfront(Array* arr, struct student student);
+
+int pushorder(Array* arr, struct student student);
