@@ -24,7 +24,7 @@ struct student newStudent(){
 }
 
 void show_options(){
-  printf("=-=-=-=-=-=-=-=-=-Static Array-=-=-=-=-=-=-=-=-=\n");
+  printf("\n=-=-=-=-=-=-=-=-=-Static Array-=-=-=-=-=-=-=-=-=\n");
   printf("[1] Push Back\n");
   printf("[2] Push Front\n");
   printf("[3] Push Order\n");
@@ -105,7 +105,35 @@ void menu(){
         printf("\nFailed!\n");
       }
       break;
-    
+    case 7:
+      if(size(arr) != -1){
+        printf("\nThe size of array is %d!\n", size(arr));
+      }else{
+        printf("\nError\n");
+      }
+      break;
+    case 8:
+     if(empty(arr) != -1){
+       if(empty(arr)){
+        printf("\nThe array is empty!\n");
+       }else{
+        printf("\nThe array is not empty!\n");
+       }
+      }else{
+        printf("\nError\n");
+      }
+      break;
+    case 9:
+      if(full(arr) != -1){
+       if(full(arr)){
+        printf("\nThe array is full!\n");
+       }else{
+        printf("\nThe array is not full!\n");
+       }
+      }else{
+        printf("\nError\n");
+      }
+      break;
     case 12:
       if(!show(arr)){
         printf("\nFailed!\n");
