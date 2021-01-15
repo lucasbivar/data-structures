@@ -1,9 +1,10 @@
 #include "staticArray.h"
+#include <stdlib.h>
 
 struct array{
   int size;
   struct student data[MAX];
-}
+};
 
 Array* create(){
   Array* arr;
@@ -63,7 +64,7 @@ int pushorder(Array* arr, struct student student){
   if(arr == NULL) return 0;
   if(full(arr)) return 0;
   int k, i =0;
-  while(i < arr->size && arr->data[i].enrollment < student->enrollment) i++;
+  while(i < arr->size && arr->data[i].enrollment < student.enrollment) i++;
 
   for(k = arr->size-1; k >= i; k--){
     arr->data[k+1] = arr->data[k];
@@ -92,7 +93,7 @@ int removefront(Array* arr){
   return 1;
 }
 
-int remove(Array* arr, int enrollment){
+int removestudent(Array* arr, int enrollment){
   if(arr == NULL) return 0;
   if(arr->size == 0) return 0;
   int k, i = 0;

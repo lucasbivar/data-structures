@@ -28,7 +28,7 @@ int removeback(Array* arr);
 
 int removefront(Array* arr);
 
-int remove(Array* arr, int enrollment);
+int removestudent(Array* arr, int enrollment);
 
 int get(Array* arr, int index, struct student *student);
 
