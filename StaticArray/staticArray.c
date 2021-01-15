@@ -11,3 +11,7 @@ Array* create(){
   }
   return arr;
 }
+
+void release(Array* arr){
+  free(arr);
+}

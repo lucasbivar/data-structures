@@ -9,3 +9,5 @@ struct student{
 typedef struct array Array; 
 
 Array* create();
+
+void release(Array* arr);
