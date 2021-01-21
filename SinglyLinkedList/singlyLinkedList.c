@@ -29,3 +29,14 @@ void release(singlyLinkedList* list){
     free(list);
   }
 }
+
+int size(singlyLinkedList* list){
+  if(list != NULL) return 0;
+  int s = 0;
+  Node* n = *list;
+  while(n != NULL){
+    s++;
+    n = n->prox;
+  }
+  return s;
+}

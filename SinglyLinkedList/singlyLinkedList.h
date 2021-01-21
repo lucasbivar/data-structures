@@ -9,3 +9,5 @@ typedef struct node* singlyLinkedList;
 singlyLinkedList* create();
 
 void release(singlyLinkedList* list);
+
+int size(singlyLinkedList* list);
