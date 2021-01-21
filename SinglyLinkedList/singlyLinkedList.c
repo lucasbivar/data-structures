@@ -40,3 +40,9 @@ int size(singlyLinkedList* list){
   }
   return s;
 }
+
+int empty(singlyLinkedList* list){
+  if(list == NULL) return 1;
+  if(*list == NULL) return 1;
+  return 0;
+}
