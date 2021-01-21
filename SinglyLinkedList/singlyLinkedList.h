@@ -7,3 +7,5 @@ struct student{
 typedef struct node* singlyLinkedList;
 
 singlyLinkedList* create();
+
+void release(singlyLinkedList* list);

@@ -17,3 +17,15 @@ singlyLinkedList* create(){
   }
   return list;
 }
+
+void release(singlyLinkedList* list){
+  if(list != NULL){
+    Node* n;
+    while((*list) != NULL){
+      n = *list;
+      *list = (*list)->next;
+      free(n);
+    }
+    free(list);
+  }
+}
