@@ -5,3 +5,5 @@ struct student{
 };
 
 typedef struct node* singlyLinkedList;
+
+singlyLinkedList* create();
