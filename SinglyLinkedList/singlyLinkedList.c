@@ -63,7 +63,7 @@ int pushfront(singlyLinkedList* list, struct student student){
 
 int pushback(singlyLinkedList* list, struct student student){
   if(list == NULL) return 0;
-  
+
   Node* n = (Node*) malloc(sizeof(Node));
 
   if(n == NULL) return 0;
@@ -80,5 +80,42 @@ int pushback(singlyLinkedList* list, struct student student){
     }
     aux->next = n;
   }
+  return 1;
+}
+
+int pushorder(singlyLinkedList* list, struct student student){
+  if(list == NULL) return 0;
+
+  Node* n = (*Node) malloc(sizeof(Node));
+
+  if(n == NULL) return 0;
+
+  n->data = student;
+
+  if(empty(list)){
+    n->next = (*list);
+    *list = n;
+  }else{
+
+    Node* previous, current = *list;
+
+    while(current != NULL && current->data.enrollment < student.enrollment){
+      previous = current;
+      current = current->next;
+    }
+
+    if(current == *list){
+
+      n->next = (*list);
+      *list = n;
+
+    }else{
+
+      n->next = previous->next;
+      previous->next = n;
+
+    }
+  }
+  
   return 1;
 }
