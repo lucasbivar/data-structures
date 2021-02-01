@@ -15,3 +15,5 @@ int size(singlyLinkedList* list);
 int empty(singlyLinkedList* list);
 
 int pushfront(singlyLinkedList* list, struct student student);
+
+int pushback(singlyLinkedList* list, struct student student);
