@@ -13,3 +13,5 @@ void release(singlyLinkedList* list);
 int size(singlyLinkedList* list);
 
 int empty(singlyLinkedList* list);
+
+int pushfront(singlyLinkedList* list, struct student student);

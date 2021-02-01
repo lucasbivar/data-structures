@@ -46,3 +46,17 @@ int empty(singlyLinkedList* list){
   if(*list == NULL) return 1;
   return 0;
 }
+
+int pushfront(singlyLinkedList* list, struct student student){
+  if(list == NULL) return 0;
+
+  Node* n = (Node*) malloc(sizeof(Node));
+
+  if(n == NULL) return 0;
+
+  n->next = (*list);
+  n->data = student;
+  *list = n;
+  
+  return 1;
+}
