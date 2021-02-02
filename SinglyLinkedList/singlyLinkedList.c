@@ -152,3 +152,24 @@ int removeback(singlyLinkedList* list){
 
   return 1;
 }
+
+int removestudent(singlyLinkedList* list, int enrollment){
+  if(list == NULL) return 0;
+
+  Node *previous, *current = *list;
+  while (current != NULL && current->data.enrollment != enrollment){
+    previous = current;
+    current = current->next;
+  }
+
+  if(current == NULL) return 0;
+
+  if((*list) == current){
+    *list = current->next;
+  }else{
+    previous->next = current->next;
+    free(current);
+  }
+  
+  return 1;
+}
