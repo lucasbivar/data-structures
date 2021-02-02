@@ -25,3 +25,5 @@ int removefront(singlyLinkedList* list);
 int removeback(singlyLinkedList* list);
 
 int removestudent(singlyLinkedList* list, int enrollment);
+
+int get(singlyLinkedList* list, int index, struct student* student);

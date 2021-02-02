@@ -170,6 +170,25 @@ int removestudent(singlyLinkedList* list, int enrollment){
     previous->next = current->next;
     free(current);
   }
-  
+
   return 1;
+}
+
+int get(singlyLinkedList* list, int index, struct student* student){
+  if(list == NULL || index < 0) return 0;
+
+  Node *n = *list;
+  int count = 0;
+  while (n != NULL && count < index){
+    n = n->next;
+    count++;
+  }
+
+  if(n == NULL){
+    return 0;
+  }else{
+    *student = n->data;
+    return 1;
+  }
+
 }
