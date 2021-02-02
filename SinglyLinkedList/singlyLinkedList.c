@@ -192,3 +192,19 @@ int get(singlyLinkedList* list, int index, struct student* student){
   }
 
 }
+
+int find(singlyLinkedList* list, int enrollment, struct student* student){
+  if(list == NULL) return 0;
+
+  Node *current= *list;
+  while (current->data.enrollment != enrollment && current != NULL){
+    current = current->next;
+  }
+
+  if(current == NULL){
+    return 0;
+  }else{
+    *student = current->data;
+    return 1;
+  }
+}
