@@ -5,7 +5,7 @@
 struct node{
   struct student data;
   struct node *next;
-}
+};
 
 typedef struct node Node;
 
@@ -36,7 +36,7 @@ int size(singlyLinkedList* list){
   Node* n = *list;
   while(n != NULL){
     s++;
-    n = n->prox;
+    n = n->next;
   }
   return s;
 }
@@ -86,7 +86,7 @@ int pushback(singlyLinkedList* list, struct student student){
 int pushorder(singlyLinkedList* list, struct student student){
   if(list == NULL) return 0;
 
-  Node* n = (*Node) malloc(sizeof(Node));
+  Node* n = (Node*) malloc(sizeof(Node));
 
   if(n == NULL) return 0;
 
@@ -97,7 +97,7 @@ int pushorder(singlyLinkedList* list, struct student student){
     *list = n;
   }else{
 
-    Node* previous, current = *list;
+    Node* previous, *current = *list;
 
     while(current != NULL && current->data.enrollment < student.enrollment){
       previous = current;
@@ -117,5 +117,18 @@ int pushorder(singlyLinkedList* list, struct student student){
     }
   }
   
+  return 1;
+}
+
+
+int removefront(singlyLinkedList* list){
+  if(list == NULL) return 0;
+  if((*list) == NULL) return 0;
+  
+  Node* n = *list;
+  *list = n->next;
+
+  free(n);
+
   return 1;
 }
