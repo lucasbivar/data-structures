@@ -124,11 +124,31 @@ int pushorder(singlyLinkedList* list, struct student student){
 int removefront(singlyLinkedList* list){
   if(list == NULL) return 0;
   if((*list) == NULL) return 0;
-  
+
   Node* n = *list;
   *list = n->next;
 
   free(n);
+
+  return 1;
+}
+
+int removeback(singlyLinkedList* list){
+  if(list == NULL) return 0;
+  if((*list) == NULL) return 0;
+
+  Node *previous, *current = *list;
+  while (current->next != NULL){
+    previous = current;
+    current = current->next;
+  }
+
+  if(current == (*list)){
+    *list = current->next;
+  }else{
+    previous->next = current->next;
+    free(current);
+  } 
 
   return 1;
 }

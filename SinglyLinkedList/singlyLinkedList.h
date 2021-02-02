@@ -21,3 +21,5 @@ int pushback(singlyLinkedList* list, struct student student);
 int pushorder(singlyLinkedList* list, struct student student);
 
 int removefront(singlyLinkedList* list);
+
+int removeback(singlyLinkedList* list);
