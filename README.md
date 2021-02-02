@@ -11,6 +11,10 @@
 
 - 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/StaticArray)
 
+## 📍 Singly Linked List
+
+- 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/SinglyLinkedList)
+
 <hr> 
  
 ## 🤓 Author 
