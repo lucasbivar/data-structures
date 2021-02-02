@@ -31,13 +31,16 @@ void release(singlyLinkedList* list){
 }
 
 int size(singlyLinkedList* list){
-  if(list != NULL) return 0;
+
+  if(list == NULL) return -1;
+
   int s = 0;
   Node* n = *list;
   while(n != NULL){
     s++;
     n = n->next;
   }
+
   return s;
 }
 
