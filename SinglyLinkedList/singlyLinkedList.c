@@ -208,3 +208,19 @@ int find(singlyLinkedList* list, int enrollment, struct student* student){
     return 1;
   }
 }
+
+int show(singlyLinkedList* list){
+  if(list == NULL) return 0;
+  if((*list) == 0) return 0;
+  Node* current = *list;
+  printf("\n=-=-=-=-=-=-=-=-=-All Students-=-=-=-=-=-=-=-=-=\n");
+  while (current != NULL){
+    printf("Name: %s", current->data.name);
+    printf("Enrollment: %d\n", current->data.enrollment);
+    printf("Pontuation 1: %.2f\n", current->data.p1);
+    printf("Pontuation 2: %.2f\n", current->data.p2);
+    printf("Pontuation 3: %.2f\n\n", current->data.p3);
+    current = current->next;
+  }
+  return 1;
+}

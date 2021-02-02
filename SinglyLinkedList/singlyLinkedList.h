@@ -30,3 +30,4 @@ int get(singlyLinkedList* list, int index, struct student* student);
 
 int find(singlyLinkedList* list, int enrollment, struct student* student);
 
+int show(singlyLinkedList* list);
