@@ -29,3 +29,22 @@ void release(doublyLinkedList* list){
     free(list);
   }
 }
+
+int size(doublyLinkedList* list){
+  if(list == NULL) return 0;
+
+  int s = 0;
+  Node* n = *list;
+  while(n != NULL){
+    *n = *n->next;
+    s++;
+  }
+
+  return s;
+}
+
+int empty(doublyLinkedList* list){
+  if(list == NULL) return 1;
+  if(*list == NULL) return 1;
+  return 0;
+}

@@ -9,3 +9,7 @@ typedef struct node* doublyLinkedList;
 doublyLinkedList* create();
 
 void release(doublyLinkedList* list);
+
+int size(doublyLinkedList* list);
+
+int empty(doublyLinkedList* list);
