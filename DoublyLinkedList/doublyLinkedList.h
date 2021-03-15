@@ -13,3 +13,9 @@ void release(doublyLinkedList* list);
 int size(doublyLinkedList* list);
 
 int empty(doublyLinkedList* list);
+
+int pushfront(doublyLinkedList* list, struct student student);
+
+int pushback(doublyLinkedList* list, struct student student);
+
+int pushorder(doublyLinkedList* list, struct student student);

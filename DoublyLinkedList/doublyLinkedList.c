@@ -48,3 +48,89 @@ int empty(doublyLinkedList* list){
   if(*list == NULL) return 1;
   return 0;
 }
+
+int pushfront(doublyLinkedList* list, struct student student){
+  if(list == NULL) return 0;
+  
+  Node *n = (Node *) malloc(sizeof(Node));
+
+  if(n == NULL) return 0;
+
+  n->data = student;
+  n->next = *list;
+  n->prev = NULL;
+
+  if(*list != NULL){
+    (*list)->prev = n;
+  }
+
+  *list = n;
+  return 1;
+}
+
+
+int pushback(doublyLinkedList* list, struct student student){
+  if(list == NULL) return 0;
+
+  Node *n = (Node *) malloc(sizeof(Node));
+
+  if(n == NULL) return 0;
+
+  n->data = student;
+  n->next = NULL;
+
+  if(*list == NULL){
+    n->prev = NULL;
+    *list = n;
+  }else{
+    Node* aux = *list;
+    while (aux->next != NULL){
+      aux = aux->next;
+    }
+    aux->next = n;
+    n->prev = aux;
+  }
+  return 1;
+}
+
+int pushorder(doublyLinkedList* list, struct student student){
+  if(list == NULL) return 0;
+
+  Node* n = (Node*) malloc(sizeof(Node));
+
+  if(n == NULL) return 0;
+
+  n->data = student;
+
+  if(empty(list)){
+
+    n->prev = NULL;
+    n->next = NULL;
+    *list = n;
+
+  }else{
+    Node *prev, *current = *list;
+
+    while((current != NULL) && (current->data.enrollment < student.enrollment)){
+      prev = current;
+      current = current->next;
+    }
+
+    if(current == *list){
+      n->prev = NULL;
+      (*list)->prev = n;
+      n->next = *list;
+      *list = n;
+
+    }else{
+      n->next = prev->next;
+      n->prev = prev;
+      prev->next = n;
+
+      if(current != NULL){
+        current->prev = n;
+      }
+    }
+  }
+  return 1;
+}
