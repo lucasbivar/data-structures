@@ -15,6 +15,10 @@
 
 - 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/SinglyLinkedList)
 
+## 📍 Doubly Linked List
+
+- 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/DoublyLinkedList)
+
 <hr> 
  
 ## 🤓 Author 
