@@ -19,3 +19,9 @@ int pushfront(doublyLinkedList* list, struct student student);
 int pushback(doublyLinkedList* list, struct student student);
 
 int pushorder(doublyLinkedList* list, struct student student);
+
+int removefront(doublyLinkedList* list);
+
+int removeback(doublyLinkedList* list);
+
+int removestudent(doublyLinkedList* list, int enrollment);

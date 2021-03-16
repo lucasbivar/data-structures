@@ -134,3 +134,60 @@ int pushorder(doublyLinkedList* list, struct student student){
   }
   return 1;
 }
+
+int removefront(doublyLinkedList* list){
+  if(list == NULL) return 0;
+  if(*list == NULL) return 0;
+
+  Node *n = *list;
+  *list = n->next;
+  if(n->next != NULL){
+    n->next->prev = NULL;
+  }
+
+  free(n);
+  return 1;
+}
+
+int removeback(doublyLinkedList* list){
+  if(list == NULL) return 0;
+  if((*list) == NULL) return 0;
+
+  Node* n = *list;
+  while(n->next != NULL){
+    n = n->next;
+  }
+
+  if(n->prev == NULL){
+    *list = n->next;
+  }else{
+    n->prev->next = NULL;
+  }
+
+  free(n);
+  return 1;
+}
+
+int removestudent(doublyLinkedList* list, int enrollment){
+  if(list == NULL) return 0;
+  if((*list) == NULL) return 0;
+
+  Node *n = *list;
+  while((n != NULL) && (n->data.enrollment != enrollment)){
+    n = n->next;
+  }
+
+  if(n == NULL) return 0;
+
+  if(n->prev == NULL){
+    *list = n->next;
+  }else{
+    n->prev->next = n->next;
+  }
+
+  if(n->next != NULL){
+    n->next->prev = n->prev;
+  }
+  free(n);
+  return 1;
+}
