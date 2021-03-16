@@ -22,7 +22,7 @@ void release(doublyLinkedList* list){
   if(list != NULL){
     Node *n;
     while ((*list) != NULL){
-      n = list;
+      n = *list;
       *list = (*list)->next;
       free(n);
     }
@@ -36,7 +36,7 @@ int size(doublyLinkedList* list){
   int s = 0;
   Node* n = *list;
   while(n != NULL){
-    *n = *n->next;
+    n = n->next;
     s++;
   }
 
