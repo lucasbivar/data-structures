@@ -25,3 +25,9 @@ int removefront(doublyLinkedList* list);
 int removeback(doublyLinkedList* list);
 
 int removestudent(doublyLinkedList* list, int enrollment);
+
+int get(doublyLinkedList* list, int index, struct student* student);
+
+int find(doublyLinkedList* list, int enrollment, struct student* student);
+
+int show(doublyLinkedList* list);
