@@ -31,3 +31,21 @@ void release(circularLinkedList* list){
     free(list);
   }
 }
+
+int size(circularLinkedList* list){
+  if(list == NULL || (*list) == NULL) return 0;
+
+  int s = 0;
+  Node* n = *list;
+  do{
+    s++;
+    n = n->next;
+  }while(n != (*list));
+
+  return s;
+}
+
+int empty(circularLinkedList* list){
+  if(list == NULL && (*list) == NULL) return 1;
+  return 0;
+}

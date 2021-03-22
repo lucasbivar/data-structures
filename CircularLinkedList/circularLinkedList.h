@@ -9,3 +9,7 @@ typedef struct node* circularLinkedList;
 circularLinkedList* create();
 
 void release(circularLinkedList* list);
+
+int size(circularLinkedList* list);
+
+int empty(circularLinkedList* list);
