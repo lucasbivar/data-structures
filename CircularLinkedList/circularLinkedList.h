@@ -19,3 +19,9 @@ int pushfront(circularLinkedList* list, struct student student);
 int pushback(circularLinkedList* list, struct student student);
 
 int pushorder(circularLinkedList* list, struct student student);
+
+int removefront(circularLinkedList* list);
+
+int removeback(circularLinkedList* list);
+
+int removestudent(circularLinkedList* list, int enrollment);

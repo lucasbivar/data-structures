@@ -136,7 +136,7 @@ int pushorder(circularLinkedList* list, struct student student){
       *list = n;
 
     }else{
-      
+
       Node *prev = *list, *current = (*list)->next;
       while (current != (*list) && current->data.enrollment < student.enrollment){
         prev = current;
@@ -150,4 +150,93 @@ int pushorder(circularLinkedList* list, struct student student){
   }
 
   return 1;
+}
+
+int removefront(circularLinkedList* list){
+  if(list == NULL || (*list) == NULL) return 0;
+
+  if((*list) == (*list)->next){
+    free(*list);
+    *list = NULL;
+    return 1;
+  }
+
+  Node* current = *list;
+  while(current->next != (*list)){
+    current = current->next;
+  }
+
+  Node* n = *list;
+  current->next = n->next;
+  *list = n->next;
+  free(n);
+
+  return 1;
+}
+
+int removeback(circularLinkedList* list){
+  if(list == NULL || (*list) == NULL) return 0;
+
+  if((*list) == (*list)->next){
+
+    free(*list);
+    *list = NULL;
+     
+    return 1;
+  }
+
+  Node *current, *n = *list;
+  while (n->next != (*list)){
+    current = n;
+    n = n->next;
+  }
+
+  current->next = n->next;
+  free(n);
+
+  return 1;
+}
+
+int removestudent(circularLinkedList* list, int enrollment){
+  if(list == NULL || (*list) == NULL) return 0;
+
+  Node *n = *list;
+  if(n->data.enrollment == enrollment){
+
+    if(n == n->next){
+
+      free(n);
+      *list = NULL;
+      return 1;
+
+    }else{
+
+      Node *last = *list;
+      while (last->next != (*list)){
+        last = last->next;
+      }
+
+      last->next = (*list)->next;
+      *list = (*list)->next;
+      free(n);
+
+      return 1;
+    }
+
+  }else{
+
+    Node *prev = n;
+    n = n->next;
+    while(n != (*list) && n->data.enrollment != enrollment){
+      prev = n;
+      n = n->next;
+    }
+
+    if(n == *list) return 0;
+
+    prev->next = n->next;
+    free(n);
+
+    return 1;
+  }
 }
