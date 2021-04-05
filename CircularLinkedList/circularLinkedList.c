@@ -46,7 +46,7 @@ int size(circularLinkedList* list){
 }
 
 int empty(circularLinkedList* list){
-  if(list == NULL && (*list) == NULL) return 1;
+  if(list == NULL || (*list) == NULL) return 1;
   return 0;
 }
 
@@ -266,7 +266,7 @@ int find(circularLinkedList* list, int enrollment, struct student* student){
   while(n->next != (*list) && n->data.enrollment != enrollment){
     n = n->next;
   }
-  
+
   if(n->data.enrollment != enrollment){
     return 0;
   }else{
