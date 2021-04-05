@@ -19,6 +19,10 @@
 
 - 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/DoublyLinkedList)
 
+## 📍 Circular Linked List
+
+- 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/CircularLinkedList)
+
 <hr> 
  
 ## 🤓 Author 
