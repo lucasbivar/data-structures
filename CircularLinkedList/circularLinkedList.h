@@ -13,3 +13,9 @@ void release(circularLinkedList* list);
 int size(circularLinkedList* list);
 
 int empty(circularLinkedList* list);
+
+int pushfront(circularLinkedList* list, struct student student);
+
+int pushback(circularLinkedList* list, struct student student);
+
+int pushorder(circularLinkedList* list, struct student student);
