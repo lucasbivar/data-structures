@@ -25,3 +25,9 @@ int removefront(circularLinkedList* list);
 int removeback(circularLinkedList* list);
 
 int removestudent(circularLinkedList* list, int enrollment);
+
+int get(circularLinkedList* list, int index, struct student* student);
+
+int find(circularLinkedList* list, int enrollment, struct student* student);
+
+int show(circularLinkedList* list);

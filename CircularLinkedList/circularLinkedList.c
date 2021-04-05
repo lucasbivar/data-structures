@@ -240,3 +240,54 @@ int removestudent(circularLinkedList* list, int enrollment){
     return 1;
   }
 }
+
+int get(circularLinkedList* list, int index, struct student* student){
+  if(list == NULL || index < 0) return 0;
+
+  int c = 0;
+  Node* n = *list;
+  while(n->next != (*list) && c < index){
+    n = n->next;
+    c++;
+  }
+
+  if(c != index) {
+    return 0;
+  }else{
+    *student = n->data;
+    return 1;
+  }
+}
+
+int find(circularLinkedList* list, int enrollment, struct student* student){
+  if(list == NULL || (*list) == NULL) return 0;
+
+  Node* n = *list;
+  while(n->next != (*list) && n->data.enrollment != enrollment){
+    n = n->next;
+  }
+  
+  if(n->data.enrollment != enrollment){
+    return 0;
+  }else{
+    *student = n->data;
+    return 1;
+  }
+}
+
+int show(circularLinkedList* list){
+  if(list == NULL) return 0;
+  if((*list) == NULL) return 0;
+
+  Node* current = *list;
+  printf("\n=-=-=-=-=-=-=-=-=-All Students-=-=-=-=-=-=-=-=-=\n");
+  do{
+    printf("Name: %s", current->data.name);
+    printf("Enrollment: %d\n", current->data.enrollment);
+    printf("Pontuation 1: %.2f\n", current->data.p1);
+    printf("Pontuation 2: %.2f\n", current->data.p2);
+    printf("Pontuation 3: %.2f\n\n", current->data.p3);
+    current = current->next;
+  }while(current != (*list));
+  return 1;
+}
