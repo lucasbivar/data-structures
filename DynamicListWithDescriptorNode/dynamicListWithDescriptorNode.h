@@ -20,3 +20,4 @@ int removefront(List* list);
 
 int removeback(List* list);
 
+int show(List* list);

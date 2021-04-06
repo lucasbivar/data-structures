@@ -119,3 +119,19 @@ int removeback(List* list){
   list->size--;
   return 1;
 }
+
+int show(List* list){
+  if(list == NULL) return 0;
+  if(list->head == NULL) return 0;
+  Node* current = list->head;
+  printf("\n=-=-=-=-=-=-=-=-=-All Students-=-=-=-=-=-=-=-=-=\n");
+  while (current != NULL){
+    printf("Name: %s", current->data.name);
+    printf("Enrollment: %d\n", current->data.enrollment);
+    printf("Pontuation 1: %.2f\n", current->data.p1);
+    printf("Pontuation 2: %.2f\n", current->data.p2);
+    printf("Pontuation 3: %.2f\n\n", current->data.p3);
+    current = current->next;
+  }
+  return 1;
+}
