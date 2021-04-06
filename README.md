@@ -23,6 +23,10 @@
 
 - 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/CircularLinkedList)
 
+## 📍 Dynamic List With Descriptor Node (e.g., Singly Linked List implemented with Descriptor Node)
+
+- 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/DynamicListWithDescriptorNode)
+
 <hr> 
  
 ## 🤓 Author 
