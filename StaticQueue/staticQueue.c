@@ -20,3 +20,19 @@ void release(staticQueue* q){
   free(q);
 }
 
+int size(staticQueue* q){
+  if(q == NULL) return -1;
+  return q->size;
+}
+
+int empty(staticQueue* q){
+  if(q == NULL) return -1;
+
+  return (q->size == 0);
+}
+
+int full(staticQueue* q){
+  if(q == NULL) return -1;
+
+  return (q->size == MAX);
+}

@@ -11,3 +11,9 @@ typedef struct queue staticQueue;
 staticQueue* create();
 
 void release(staticQueue* q);
+
+int size(staticQueue* q);
+
+int empty(staticQueue* q);
+
+int full(staticQueue* q);
