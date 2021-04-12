@@ -19,3 +19,9 @@ int full(dynamicQueue* q);
 int push(dynamicQueue* q, struct student student);
 
 int pop(dynamicQueue* q);
+
+int front(dynamicQueue* q, struct student* student);
+
+int back(dynamicQueue* q, struct student* student);
+
+int show(dynamicQueue* q);

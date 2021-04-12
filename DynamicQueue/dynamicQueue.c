@@ -84,3 +84,38 @@ int pop(dynamicQueue* q){
   q->size--;
   return 1;
 }
+
+int front(dynamicQueue* q, struct student* student){
+  if(q == NULL) return 0;
+  if(empty(q)) return 0;
+
+  *student = q->begin->data;
+
+  return 1;
+}
+
+int back(dynamicQueue* q, struct student* student){
+  if(q == NULL) return 0;
+  if(empty(q)) return 0;
+
+  *student = q->end->data;
+
+  return 1;
+}
+
+int show(dynamicQueue* q){
+  if(q == NULL) return 0;
+  if(empty(q)) return 0;
+  
+  Node* current = q->begin;
+  printf("\n=-=-=-=-=-=-=-=-=-Queue of Students-=-=-=-=-=-=-=-=-=\n");
+  while(current != NULL){
+    printf("Name: %s", current->data.name);
+    printf("Enrollment: %d\n", current->data.enrollment);
+    printf("Pontuation 1: %.2f\n", current->data.p1);
+    printf("Pontuation 2: %.2f\n", current->data.p2);
+    printf("Pontuation 3: %.2f\n\n", current->data.p3);
+    current = current->next;
+  }
+  return 1;
+}
