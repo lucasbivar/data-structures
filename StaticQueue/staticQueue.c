@@ -4,15 +4,15 @@
 
 struct queue{
   struct student data[MAX];
-  int size, front, back;
+  int size, begin, end;
 };
 
 staticQueue* create(){
   staticQueue* ptr = (staticQueue*) malloc(sizeof(struct queue));
   if(ptr != NULL){
     ptr->size = 0;
-    ptr->front = 0;
-    ptr->back = 0;
+    ptr->begin = 0;
+    ptr->end = 0;
   }
 }
 
@@ -35,4 +35,23 @@ int full(staticQueue* q){
   if(q == NULL) return -1;
 
   return (q->size == MAX);
+}
+
+int push(staticQueue*q, struct student student){
+  if(q == NULL) return 0;
+  if(full(q)) return 0;
+
+  q->data[q->end] = student;
+  q->end = (q->end+1)%MAX;
+  q->size++;
+  return 1;
+}
+
+int pop(staticQueue* q){
+  if(q == NULL) return 0;
+  if(empty(q)) return 0;
+  
+  q->begin = (q->begin+1)%MAX;
+  q->size--;
+  return 1;
 }

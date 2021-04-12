@@ -17,3 +17,7 @@ int size(staticQueue* q);
 int empty(staticQueue* q);
 
 int full(staticQueue* q);
+
+int push(staticQueue* q, struct student student);
+
+int pop(staticQueue* q);
