@@ -15,3 +15,7 @@ int size(dynamicQueue* q);
 int empty(dynamicQueue* q);
 
 int full(dynamicQueue* q);
+
+int push(dynamicQueue* q, struct student student);
+
+int pop(dynamicQueue* q);
