@@ -25,3 +25,5 @@ int pop(staticQueue* q);
 int front(staticQueue* q, struct student* student);
 
 int back(staticQueue* q, struct student* student);
+
+int show(staticQueue* q);

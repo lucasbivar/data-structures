@@ -14,6 +14,7 @@ staticQueue* create(){
     ptr->begin = 0;
     ptr->end = 0;
   }
+  return ptr;
 }
 
 void release(staticQueue* q){
@@ -69,7 +70,22 @@ int back(staticQueue* q, struct student* student){
   if(q == NULL) return 0;
   if(empty(q)) return 0;
 
-  *student = q->data[q->end];
-  
+  *student = q->data[q->end-1];
+
+  return 1;
+}
+
+int show(staticQueue* q){
+  if(q == NULL) return 0;
+  if(empty(q)) return 0;
+  printf("\n=-=-=-=-=-=-=-=-=-Queue of Students-=-=-=-=-=-=-=-=-=\n");
+  for(int i = 0, aux = q->begin; i < q->size; i++, aux =(aux+1)%MAX){
+    printf("Name: %s", q->data[aux].name);
+    printf("Enrollment: %d\n", q->data[aux].enrollment);
+    printf("Pontuation 1: %.2f\n", q->data[aux].p1);
+    printf("Pontuation 2: %.2f\n", q->data[aux].p2);
+    printf("Pontuation 3: %.2f\n\n", q->data[aux].p3);
+  }
+
   return 1;
 }
