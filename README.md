@@ -27,7 +27,7 @@
 
 - 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/DynamicListWithDescriptorNode)
 
-## 📍 Static Queue (Contiguous)
+## 📍 Static Queue 
 
 - 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/StaticQueue)
 
