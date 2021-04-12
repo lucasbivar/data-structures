@@ -21,3 +21,7 @@ int full(staticQueue* q);
 int push(staticQueue* q, struct student student);
 
 int pop(staticQueue* q);
+
+int front(staticQueue* q, struct student* student);
+
+int back(staticQueue* q, struct student* student);

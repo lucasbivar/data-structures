@@ -50,8 +50,26 @@ int push(staticQueue*q, struct student student){
 int pop(staticQueue* q){
   if(q == NULL) return 0;
   if(empty(q)) return 0;
-  
+
   q->begin = (q->begin+1)%MAX;
   q->size--;
+  return 1;
+}
+
+int front(staticQueue* q, struct student* student){
+  if(q == NULL) return 0;
+  if(empty(q)) return 0;
+
+  *student = q->data[q->begin];
+
+  return 1;
+}
+
+int back(staticQueue* q, struct student* student){
+  if(q == NULL) return 0;
+  if(empty(q)) return 0;
+
+  *student = q->data[q->end];
+  
   return 1;
 }
