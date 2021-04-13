@@ -28,3 +28,26 @@ void release(dynamicStack* s){
     free(s);
   }
 }
+
+int size(dynamicStack* s){
+  if(s == NULL) return -1;
+  
+  int s = 0;
+  Node* temp = *s;
+  while(temp != NULL){
+    temp = temp->next;
+    s++;
+  }
+  return size;
+}
+
+int full(dynamicStack* s){
+  if(s == NULL) return -1;
+  return 0;
+}
+
+int empty(dynamicStack* s){
+  if(s == NULL) return -1;
+  
+  return ((*s) == NULL);
+}

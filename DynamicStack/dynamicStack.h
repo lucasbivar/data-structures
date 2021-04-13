@@ -9,3 +9,9 @@ typedef struct node* dynamicStack;
 dynamicStack* create();
 
 void release(dynamicStack* s);
+
+int size(dynamicStack* s);
+
+int full(dynamicStack* s);
+
+int empty(dynamicStack* s);
