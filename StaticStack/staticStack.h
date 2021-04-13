@@ -17,3 +17,11 @@ int size(staticStack* s);
 int full(staticStack* s);
 
 int empty(staticStack* s);
+
+int push(staticStack* s, struct student student);
+
+int pop(staticStack* s);
+
+int top(staticStack* s, struct student* student);
+
+int show(staticStack* s);
