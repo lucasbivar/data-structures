@@ -35,6 +35,14 @@
 
 - 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/DynamicQueue)
 
+## 📍 Static Stack 
+
+- 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/StaticStack)
+
+## 📍 Dynamic Stack 
+
+- 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/DynamicStack)
+
 <hr> 
  
 ## 🤓 Author 
