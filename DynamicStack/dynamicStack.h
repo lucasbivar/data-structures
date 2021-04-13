@@ -21,3 +21,5 @@ int push(dynamicStack* s, struct student student);
 int pop(dynamicStack* s);
 
 int top(dynamicStack* s, struct student* student);
+
+int show(dynamicStack* s);

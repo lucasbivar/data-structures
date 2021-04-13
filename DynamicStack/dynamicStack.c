@@ -14,7 +14,7 @@ dynamicStack* create(){
   if(ptr != NULL){
     *ptr = NULL;
   }
-  return NULL;
+  return ptr;
 }
 
 void release(dynamicStack* s){
@@ -32,13 +32,13 @@ void release(dynamicStack* s){
 int size(dynamicStack* s){
   if(s == NULL) return -1;
 
-  int s = 0;
+  int c = 0;
   Node* temp = *s;
   while(temp != NULL){
     temp = temp->next;
-    s++;
+    c++;
   }
-  return size;
+  return c;
 }
 
 int full(dynamicStack* s){
@@ -57,7 +57,7 @@ int push(dynamicStack* s, struct student student){
 
   Node *newNode = (Node*) malloc(sizeof(Node));
   if(newNode == NULL) return 0;
-  
+
   newNode->data = student;
   newNode->next = (*s);
   (*s) = newNode;
@@ -79,5 +79,21 @@ int top(dynamicStack* s, struct student* student){
   if(empty(s)) return 0;
 
   *student = (*s)->data;
+  return 1;
+}
+
+int show(dynamicStack* s){
+  if(s == NULL) return 0;
+  if(empty(s)) return 0;
+  Node *current = *s;
+  printf("\n=-=-=-=-=-=-=-=-=-Stack of Students-=-=-=-=-=-=-=-=-=\n");
+  while(current != NULL){
+    printf("Name: %s", current->data.name);
+    printf("Enrollment: %d\n", current->data.enrollment);
+    printf("Pontuation 1: %.2f\n", current->data.p1);
+    printf("Pontuation 2: %.2f\n", current->data.p2);
+    printf("Pontuation 3: %.2f\n\n", current->data.p3);
+    current = current->next;
+  }
   return 1;
 }
