@@ -12,3 +12,8 @@ staticStack* create();
 
 void release(staticStack* s);
 
+int size(staticStack* s);
+
+int full(staticStack* s);
+
+int empty(staticStack* s);

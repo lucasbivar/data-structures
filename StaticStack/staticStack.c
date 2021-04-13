@@ -18,3 +18,20 @@ staticStack* create(){
 void release(staticStack* s){
   free(q);
 }
+
+int size(staticStack* s){
+  if(s == NULL) return -1;
+  return s->size;
+}
+
+int full(staticStack* s){
+  if(s == NULL) return -1;
+
+  return (s->size == MAX);
+}
+
+int empty(staticStack* s){
+  if(s == NULL) return -1;
+  
+  return (s->size == 0);
+}
