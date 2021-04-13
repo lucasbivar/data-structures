@@ -15,3 +15,9 @@ int size(dynamicStack* s);
 int full(dynamicStack* s);
 
 int empty(dynamicStack* s);
+
+int push(dynamicStack* s, struct student student);
+
+int pop(dynamicStack* s);
+
+int top(dynamicStack* s, struct student* student);
