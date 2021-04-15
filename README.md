@@ -43,6 +43,10 @@
 
 - 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/DynamicStack)
 
+## 📍 Sparse Matrix
+
+- 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/SparseMatrix)
+
 <hr> 
  
 ## 🤓 Author 
