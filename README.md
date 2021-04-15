@@ -7,6 +7,10 @@
 
 - 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/SearchingAlgorithms)
 
+## 📍 Sorting Algorithms
+
+- 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/SortingAlgorithms)
+
 ## 📍 Abstract Data Type
 
 - 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/ADT)
