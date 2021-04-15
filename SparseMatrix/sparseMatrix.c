@@ -68,7 +68,7 @@ int assign(sparseMatrix* matrix, int row, int column, int data){
       newNode->data = data;
       newNode->next = current;
 
-      //Will the node be in the first position or the row is empty or ?
+      //Will the node be in the first position or the row is empty?
       if(previous == NULL){
         matrix->arrangement[row] = newNode;
       }else{
