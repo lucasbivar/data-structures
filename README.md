@@ -3,6 +3,10 @@
 
 <hr>
 
+## 📍 Searching Algorithms
+
+- 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/SearchingAlgorithms)
+
 ## 📍 Abstract Data Type
 
 - 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/ADT)
