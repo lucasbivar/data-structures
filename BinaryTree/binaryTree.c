@@ -29,3 +29,28 @@ void releaseTree(binaryTree* root){
   releaseNode(*root);
   free(root);
 }
+
+int empty(binaryTree* root){
+  if(root == NULL) return 1;
+  return (*root == NULL);
+}
+
+int heightOfTree(binaryTree* root){
+  if(root == NULL) return 0;
+  if(*root == NULL) return 0;
+  int left_height = heightOfTree(&((*root)->left));
+  int right_height = heightOfTree(&((*root)->right));
+  if(left_height > right_height){
+    return (left_height+1);
+  }else{
+    return (right_height+1);
+  }
+}
+
+int numberOfNodes(binaryTree* root){
+  if(root == NULL) return 0;
+  if(*root == NULL) return 0;
+  int left_size = numberOfNodes(&((*root)->left));
+  int right_size = numberOfNodes(&((*root)->right));
+  return (left_size + right_size + 1);
+}
