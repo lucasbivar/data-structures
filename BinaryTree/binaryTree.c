@@ -168,3 +168,21 @@ struct NODE* erase_current(struct NODE* current){
   free(current);
   return node2;
 }
+
+int find(binaryTree* root, int value){
+  if(root == NULL){
+    return 0;
+  }
+  struct NODE* current = *root;
+  while(current != NULL){
+    if(value == current->data){
+      return 1;
+    }
+    if(value > current->data){
+      current = current->right;
+    }else{
+      current = current->left;
+    }
+  }
+  return 0;
+}

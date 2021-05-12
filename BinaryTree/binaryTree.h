@@ -23,3 +23,5 @@ int insert(binaryTree* root, int value);
 int erase(binaryTree* root, int value);
 
 struct NODE* erase_current(struct NODE* current);
+
+int find(binaryTree* root, int value);
