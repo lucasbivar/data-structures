@@ -133,17 +133,18 @@ int erase(binaryTree* root, int value){
         }else{
           prev->left = erase_current(current);
         }
-        return 1;
       }
-      //keep searching
+      return 1;
+    }
+    //keep searching
       prev = current;
       if(value > current->data){
         current = current->right;
       }else{
         current = current->left;
       }
-    }
   }
+  return 0;
 }
 
 struct NODE* erase_current(struct NODE* current){
