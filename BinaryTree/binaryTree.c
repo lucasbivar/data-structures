@@ -81,3 +81,39 @@ void postorder(binaryTree* root){
     printf("%d\n", (*root)->data);
   } 
 }
+
+int insert(binaryTree* root, int value){
+  if(root == NULL) return 0;
+
+  struct NODE* newNode;
+  newNode = (struct NODE*) malloc(sizeof(struct NODE));
+  if(newNode == NULL) return 0;
+  newNode->data = value;
+  newNode->left = NULL;
+  newNode->right = NULL;
+
+  if(*root == NULL){
+    *root = newNode;
+  }else{
+    struct NODE* current = *root;
+    struct NODE* prev = NULL;
+    while (current != NULL){
+      prev = current;
+      if(value == current->data){
+        free(newNode);
+        return 0;
+      }
+      if(value > current->data){
+        current = current->right;
+      }else{
+        current = current->left;
+      }
+    }
+    if(value > prev->data){
+      prev->right = newNode;
+    }else{
+      prev->left = newNode;
+    }
+  }
+  return 1;
+}

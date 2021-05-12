@@ -17,3 +17,5 @@ void preorder(binaryTree* root);
 void inorder(binaryTree* root);
 
 void postorder(binaryTree* root);
+
+int insert(binaryTree* root, int value);
