@@ -54,3 +54,30 @@ int numberOfNodes(binaryTree* root){
   int right_size = numberOfNodes(&((*root)->right));
   return (left_size + right_size + 1);
 }
+
+void preorder(binaryTree* root){
+  if(root == NULL) return;
+  if(*root != NULL){
+    printf("%d\n", (*root)->data);
+    preorder(&((*root)->left));
+    preorder(&((*root)->right));
+  }
+}
+
+void inorder(binaryTree* root){
+  if(root == NULL) return;
+  if(*root != NULL){
+    inorder(&((*root)->left));
+    printf("%d\n", (*root)->data);
+    inorder(&((*root)->right));
+  }
+}
+
+void postorder(binaryTree* root){
+  if(root == NULL) return;
+  if(*root != NULL){
+    postorder(&((*root)->left));
+    postorder(&((*root)->right));
+    printf("%d\n", (*root)->data);
+  } 
+}

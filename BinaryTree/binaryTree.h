@@ -11,3 +11,9 @@ int empty(binaryTree* root);
 int heightOfTree(binaryTree* root);
 
 int numberOfNodes(binaryTree* root);
+
+void preorder(binaryTree* root);
+
+void inorder(binaryTree* root);
+
+void postorder(binaryTree* root);
