@@ -117,3 +117,54 @@ int insert(binaryTree* root, int value){
   }
   return 1;
 }
+
+int erase(binaryTree* root, int value){
+  if(root == NULL) return 0;
+  struct NODE* prev = NULL;
+  struct NODE* current =  *root;
+
+  while(current != NULL){
+    if(value == current->data){
+      if(current == *root){
+        *root = erase_current(current);
+      }else{
+        if(prev->right == current){
+          prev->right = erase_current(current);
+        }else{
+          prev->left = erase_current(current);
+        }
+        return 1;
+      }
+      //keep searching
+      prev = current;
+      if(value > current->data){
+        current = current->right;
+      }else{
+        current = current->left;
+      }
+    }
+  }
+}
+
+struct NODE* erase_current(struct NODE* current){
+  struct NODE *node1, *node2;
+  if(current->left == NULL){
+    node2 = current->right;
+    free(current);
+    return node2;
+  }
+  node1 = current;
+  node2 = current->left;
+  while(node2->right != NULL){
+    node1 = node2;
+    node2 = node2->right;
+  }
+
+  if(node1 != current){
+    node1->right = node2->left;
+    node2->left = current->left;
+  }
+  node2->right = current->right;
+  free(current);
+  return node2;
+}

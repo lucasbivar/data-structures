@@ -19,3 +19,7 @@ void inorder(binaryTree* root);
 void postorder(binaryTree* root);
 
 int insert(binaryTree* root, int value);
+
+int erase(binaryTree* root, int value);
+
+struct NODE* erase_current(struct NODE* current);
