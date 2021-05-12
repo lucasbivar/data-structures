@@ -55,6 +55,10 @@
 
 - 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/SparseMatrix)
 
+## 📍 Binary Tree
+
+- 📦 [Repository](https://github.com/lucasbivar/data-structures/tree/main/BinaryTree)
+
 <hr> 
  
 ## 🤓 Author 
